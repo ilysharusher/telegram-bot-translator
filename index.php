@@ -19,9 +19,3 @@ $callback_id = $update['callback_query']['id'];
 $users_name = $update['message']['from']['first_name'];
 $users_text = $update['message']['text'];
 $inline_type = $update['callback_query']['data'];
-
-$telegram->sendMessage([
-    'chat_id' => $users_id,
-    'text' => "Дибил под именем, <b>{$users_name}</b> написал: <i>{$users_text}</i>",
-    'parse_mode' => 'HTML'
-]);
